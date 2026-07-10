@@ -83,4 +83,93 @@ TODO: nothing did pretty good today locked in cuh
 ====================================================================================================================================================================================
 7/9/2026
 
--
+-3 alerts, all documented in letsdefend-writeups
+
+WATCHING https://www.youtube.com/watch?v=AYgXr1dynKU OSI model
+
+NOTES:
+
+Open systems Interconnection Reference model
+
+PEOPLE DONT NEED THOSE STUPID PACKETS ANYWAY
+
+1/Physical:
+	• physics of the network
+	• singnaling, cabling, connectors
+	• not really protocols
+	• tests: loopback tests, test/replace cables, swap cards
+	ex/ cables, wires, signal
+2/Data Link: 
+	• basic network language/MAC address layer
+	• Data Link Control (DLC) protocol; MAC (media access Control) address on ethernet
+	• The "Switching" layer (network switches)
+	ex/ frames, MAC address, Extended Unique Identifer EUI, switch
+3/Network Layer:
+	• Routers use for forwarding traffic
+	• IP address 
+	• Fragment frames to traverse different networks
+	• anything with routing, IP, subnet, etc
+	ex/ IP, Router, packets
+4/Transport Layer:
+	• Transport from 1 device to another "Postoffice"
+	• TCP and UDP 
+	ex/ TCP, UDP
+5/Session layer
+	• Communication management between point A and B
+	• Start session, stop, restart
+	• Control protocols, tunneling protocols
+	ex/ Control protocols, tunneling protocols
+6/Presentation Layer
+	• Character encoding, encryption/dec
+	• Putting stuff into stuff we see with eyes
+	• Combined with 7
+	ex/ Application encryption (SSL/TLS)
+7/Application
+	• See on screen
+	• HTTP, FTP, DNS, POP3
+	ex/ Your eyes
+	
+WATCHING https://www.youtube.com/watch?v=jX1pobYmZdE common ports
+
+FTP: tcp/20 active mode data (file transfer itself) | tcp/21 (control info)
+	• authentication
+	• list, add, delete, other maintenance
+SSH: tcp/22 
+	• encrypted 
+SFTP: tcp/22 same as SSH
+	• uses SSH 
+	• secure file transfer with encrypt
+Telnet: tcp/23 
+	• old ssh not secure/encrypted
+SMTP: 	sending mail
+	• tcp/25
+DNS: domain name system; resolves names to IPS
+	• tcp/53
+HTTP: web traffic unencrypted
+	• tcp/80
+HTTPS: encrypted
+	• tcp/443
+RDP: remote desktop
+	• tcp/3389
+DHCP: dynamic host config Protocol
+	• automated config of IP, subnet mask, and other options
+	• udp/67 and udp/67
+	• requires dhcp server thats usually on our router
+NTP: Network time protocol
+	• Switches, routers, firewalls, servers, every device has its own clock
+	• Sync time across devices
+	• udp/123
+SNMP: simple network management Protocol
+	• monitor and manage connected devices on an IP network
+	• udp/161 
+LDAP: Lightweight directory access Protocol
+	• query and manage directory services over an ip network
+	• tcp/389
+	• LDAPS uses tcp/636
+SMB: Server message block
+	• windows file sharing
+	• tcp/445 
+Syslog: sends logs to your siem 
+	• tcp/514
+
+TODO FOR TOMORROW: nothing you're good cuh

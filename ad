@@ -1,0 +1,23 @@
+[33mcommit 3784dfd4de29b2ae0b81a07819177abb7791ba63[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Angel Huertas <aahuert1@uci.edu>
+Date:   Wed Jul 8 16:08:51 2026 -0700
+
+    Finished entry for 7/8/2026
+
+[33mcommit e164e86f7f693f0c702f0f38bac44bb87e176e3c[m
+Author: Angel Huertas <aahuert1@uci.edu>
+Date:   Wed Jul 8 13:36:43 2026 -0700
+
+    Added SOC107 Privilege Escalation to letsdefend Writeups
+
+[33mcommit 2aeedd8c76deaffec8544ec0f087539e30a8c693[m
+Author: Angel Huertas <aahuert1@uci.edu>
+Date:   Wed Jul 8 13:20:33 2026 -0700
+
+    Start learning log and repo structure
+
+[33mcommit f20e30ee1400a8d18210b0150f990ca251822e7a[m
+Author: Angel Huertas <125717779+Heshawka@users.noreply.github.com>
+Date:   Wed Jul 8 13:13:11 2026 -0700
+
+    Initial commit
