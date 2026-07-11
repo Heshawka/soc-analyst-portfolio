@@ -173,3 +173,8 @@ Syslog: sends logs to your siem
 	• tcp/514
 
 TODO FOR TOMORROW: nothing you're good cuh
+====================================================================================================================================================================================
+7/10/26
+
+-Did 3 Letsdefend alerts, all under 2 hours so roughly 40 minutes per alert with in depth summary and writeups, still need some work but getting much faster (started at 1 hour+ per alert)
+-Today was a lighter day, already have splunk server set up on Linux from before, so took it a little easy
