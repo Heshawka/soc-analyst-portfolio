@@ -78,7 +78,7 @@ Can change coloring rules -> view -> coloring rules
 
 can remove
 
-TODO: nothing did pretty good today locked in cuh
+TODO: nothing did pretty good today
 
 ====================================================================================================================================================================================
 7/9/2026
@@ -172,9 +172,19 @@ SMB: Server message block
 Syslog: sends logs to your siem 
 	• tcp/514
 
-TODO FOR TOMORROW: nothing you're good cuh
+TODO FOR TOMORROW: nothing you're good
 ====================================================================================================================================================================================
 7/10/26
 
 -Did 3 Letsdefend alerts, all under 2 hours so roughly 40 minutes per alert with in depth summary and writeups, still need some work but getting much faster (started at 1 hour+ per alert)
 -Today was a lighter day, already have splunk server set up on Linux from before, so took it a little easy
+
+====================================================================================================================================================================================
+7/11/26
+-Did 3 LetsDefend alerts, around 2 hours to get through again. This time I had quite an interesting true positive case. It involved around 4 phases of attack, more info about it in the writeup, pretty fun to do but was difficult
+-Need to do wireshark pcap, but this can be done on weekend on a catch-up day
+
+
+
+
+WEEKEND PCAP FOR CATCHUP DAY
