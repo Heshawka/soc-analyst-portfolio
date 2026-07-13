@@ -192,3 +192,26 @@ TODO for tomorrow:
 -get a few LetsDefend writeups ready for portfolio
 
 WEEKEND PCAP FOR CATCHUP DAY
+====================================================================================================================================================================================
+7/13/26
+-Watching https://www.youtube.com/watch?v=fRRR0sU0BnY Wireshark and DNS
+
+NOTES:
+
+DNS resolver: the middle man that resolves requested domain names to IP addresses; could have been given by ISP, or is the default gateway
+DNS cache is looked at first usually, then -> DNS traffic if needed
+
+-Captured own ethernet using DNS filter 
+	• Saw a DNS PTR record; this is for a reverse DNS lookup that maps an IP address (my own IPv6 address) to a domain
+	• Saw response from router, indicating no such name. Router and resolver in this case are the same. Router contains a DNS resolver service.
+	• A and AAAA queries for google.com.attlocal.net. This is a DNS search domain suffixing, which is designed for internal/local network convenience. Typing nslookup printer on home network would automatically try printer.attlocal.net without having to type full internal domain name. Just shortcut. It doesn't know before if name is already complete (google.com) so it tires suffixed version first before google.com
+	• A and AAAA queries for google.com. Does both in parallel, then OS connection logic picks one - leaning towards IPv6 if response was valid and network path supports it, falls back to IPv4 otherwise
+	• In the query Class: IN means internet class
+	• In the clear, plaintext. Meaning can see where connection is headed. There are newer encrypted DNS protocols like DNS over HTTPS (DoH) and DNS over TLS (DoT).
+	• DNS Response comes with a transaction ID which is sent by the requester, same ID is sent back with the response. As long as it's the same, it'll be accepted. This is the only thing verifying that a response came back from the resolver you asked. If an attacker can guess when you're gonna make a DNS query (or trigger one themselves with ad/script) and send a forged response with a matching ID, then your machine will connect to the attacker. This is the basis of DNS spoofing/cache poisoning.
+		1. Kaminsky attack has led to source port randomization and transaction ID randomization to prevent spoofing.
+-Don't wanna store DNS records in cache for too long, since they can change often
+
+FOUND really good video for next week VM project. Gotta set up kali linux. https://www.youtube.com/watch?v=cVTUeEoJgEg&list=PLW8bTPfXNGdAY3AfCNtm12Ogzryfs7Ket&index=3
+
+-Changed file structure for LetsDefend writeups. Added a draft and polished section. Polished 2 LetsDefend writeups and placed into polished folder

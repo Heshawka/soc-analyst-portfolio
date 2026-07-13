@@ -1,5 +1,3 @@
-CHECK SPELLING , CHAN
-
 SOC108 - Malicious Remote Access Software Detected
 Event ID: 38
 2021-01-01 17:36:00 UTC
@@ -10,10 +8,10 @@ attention rather than downgrading to Low.
 Confidence Level: High
 MITRE attack techniques: T1219 (Remote Access Tools) — alert 
 pattern only, not confirmed malicious. This alert triggered based 
-on installation/use of remote access software, which maps to a 
+on installation/use of remote access tools, which maps to a 
 technique commonly abused by attackers for persistence and remote 
 control.
-IOCS INCLUDED IN LETS DEFEND (DONT WORRY ABOUT THESE)
+IOCS: Included in LetsDefend
 
 Summary: 
 
@@ -36,12 +34,13 @@ No attack chain present - AnyDesk.exe is a legitimate remote desktop software. E
 Actions Taken:
 -Checked AnyDesk.exe against VirusTotal and HybridAnalysis, confirming non-malicious file.
 -Checked DanielPRD endpoint. No processes, network actions, terminal history, or browser history was found from the day of the incident.
--Found 2 firewall logs concerning DanielPRD. First log shows HTTPS connection to boot-01.net.anydesk.com (134.119.217.177). Second log shows HTTP connection to relay-61e0b722.net.anydesk.com (146.0.234.85). After research into AnyDesk, it appears that these two connections are regular behavior for the application. However, a connection from our network to outside by port 80 may be unintentional and therefore reviewed.
+-Found 2 firewall logs concerning DanielPRD. The first log shows HTTPS connection to boot-01.net.anydesk.com (134.119.217.177). The second log shows HTTP connection to relay-61e0b722.net.anydesk.com (146.0.234.85). After research into AnyDesk, it appears that these two connections are regular behavior for the application. However, a connection from our network to outside by port 80 may be unintentional and therefore reviewed.
 -Ruled out any potential malicious emails; no emails tied to Daniel have been found on the day of the incident. 
 
-Reccommended Next Steps:
+Recommended Next Steps:
 -Review AV detection signature/heuristic that triggered this alert for tuning
 -Submit AnyDesk.exe hash to AV vendor as false positive exclusion candidate
 -No further action needed for DanielPRD's host - no compromise indicators found
 -Investigate why the relay connection used HTTP instead of HTTPS — confirm this is expected AnyDesk fallback behavior rather than a misconfiguration
 -Consider firewall rule review to restrict outbound port 80 where not explicitly required, given interception risk
+

