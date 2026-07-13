@@ -184,7 +184,11 @@ TODO FOR TOMORROW: nothing you're good
 -Did 3 LetsDefend alerts, around 2 hours to get through again. This time I had quite an interesting true positive case. It involved around 4 phases of attack, more info about it in the writeup, pretty fun to do but was difficult
 -Need to do wireshark pcap, but this can be done on weekend on a catch-up day
 
-
-
+====================================================================================================================================================================================
+7/12/26
+-Couldn't do much today in terms of alertss, but it's okay weekend is for catching up
+TODO for tomorrow: 
+-checkout a malicious wireshark pcap
+-get a few LetsDefend writeups ready for portfolio
 
 WEEKEND PCAP FOR CATCHUP DAY
