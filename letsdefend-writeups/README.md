@@ -10,8 +10,8 @@ and handed off in a real SOC environment.
 
 | Alert | Category | Verdict | Priority |
 |---|---|---|---|
-| [SOC108 - Malicious Remote Access Software](./polished/SOC108 Malicious Remote Access Software.md) | Remote Access Software | False Positive | Medium |
-| [SOC153 - Suspicious PowerShell Script](./polished/SOC153 Suspicious Powershell Script Executed.md) | PowerShell / C2 / Data Exfiltration | True Positive | High |
+| [SOC108 - Malicious Remote Access Software](./polished/soc108-malicious-remote-access-software.md) | Remote Access Software | False Positive | Medium |
+| [SOC153 - Suspicious PowerShell Script](./polished/soc153-suspicious-powershell-script-executed.md) | PowerShell / C2 / Data Exfiltration | True Positive | High |
 
 ## Drafts
 
