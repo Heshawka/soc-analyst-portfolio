@@ -76,9 +76,6 @@ For phishing/hacked: check for http -> just type http -> follow stream (doesnt w
 
 Can change coloring rules -> view -> coloring rules
 
-can remove
-
-TODO: nothing did pretty good today
 
 ====================================================================================================================================================================================
 7/9/2026
@@ -91,7 +88,7 @@ NOTES:
 
 Open systems Interconnection Reference model
 
-PEOPLE DONT NEED THOSE STUPID PACKETS ANYWAY
+PDNTSPA
 
 1/Physical:
 	• physics of the network
@@ -172,7 +169,6 @@ SMB: Server message block
 Syslog: sends logs to your siem 
 	• tcp/514
 
-TODO FOR TOMORROW: nothing you're good
 ====================================================================================================================================================================================
 7/10/26
 
@@ -187,7 +183,7 @@ TODO FOR TOMORROW: nothing you're good
 ====================================================================================================================================================================================
 7/12/26
 -Couldn't do much today in terms of alertss, but it's okay weekend is for catching up
-TODO for tomorrow: 
+todo for tomorrow: 
 -checkout a malicious wireshark pcap
 -get a few LetsDefend writeups ready for portfolio
 
