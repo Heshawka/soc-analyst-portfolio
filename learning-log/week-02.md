@@ -39,3 +39,28 @@ Notes:
 	• DMARC: Domain-based message authentication, reporting, and conformance: What to do with messages if verification fails -> spam, delete, etc. Extension of SPF and DKIM.
 
 TODO for tomorrow: Clean up draft of resume, github portfolio READMEs, and submit 2 apps. 
+
+=============================================================================================================================================================================================
+7/15/26
+
+TODO for today: 
+
+-set up linked in
+-fix up resume
+-fix up github portfolio readmes and structure
+-apply to 2 positions
+
+=============================================================================================================================================================================================
+7/15-16 
+
+-was on a family trip, so unable to commit to github. Practice resumes on 7/17
+
+=============================================================================================================================================================================================
+7/17/26
+
+-Did 3 LetsDefend alerts and corresponding write-ups. The process only took an hour and a half, which is a signficiant improvement over our usual time (roughly 2+ hours)
+The process is getting much better.
+-Analyzed a malicious wireshark PCAP. This one involved a RAT and analyzing the infected windows machine. Notes have been taken on it. I may add the notes and analyzed pcaps to the github once I format them and polish a little better.
+
+=============================================================================================================================================================================================
+7/18/26
