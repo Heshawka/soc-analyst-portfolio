@@ -64,3 +64,7 @@ The process is getting much better.
 
 =============================================================================================================================================================================================
 7/18/26
+
+-much needed application day. Created job alerts for SOC analyst postings for several sites. Applied to 1 company listed on application tracker spreadsheet in google drive.
+-Polished up resume, all up to date and in the google drive.
+-Splunk and Windows Malware analysis VMS are all set up and ready to go for further labs
