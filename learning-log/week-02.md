@@ -68,3 +68,12 @@ The process is getting much better.
 -much needed application day. Created job alerts for SOC analyst postings for several sites. Applied to 1 company listed on application tracker spreadsheet in google drive.
 -Polished up resume, all up to date and in the google drive.
 -Splunk and Windows Malware analysis VMS are all set up and ready to go for further labs
+
+=============================================================================================================================================================================================
+7/20/26
+
+-Did 2 LetsDefend alerts with write-ups. Both were portfolio worthy and quite complex. 
+	1. The 2nd alert had to do with two maldocs which had obfuscated code. Got caught up in trying to decode them and it confused me even with using CyberChef. Gotta work through some more example of decoding obfuscated commands.
+-Feeling good about networking concepts, so will move towards NIST 800-61 readings. 
+-Made new directory for nist notes while reading through them in the upcoming weeks. Started on nist-800-61-rev2-notes.md, notes will not be in this log, but instead in that file. Starting with revision 2, and then moving towards revision 3 in future sessions.
+
