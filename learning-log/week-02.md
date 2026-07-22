@@ -77,3 +77,9 @@ The process is getting much better.
 -Feeling good about networking concepts, so will move towards NIST 800-61 readings. 
 -Made new directory for nist notes while reading through them in the upcoming weeks. Started on nist-800-61-rev2-notes.md, notes will not be in this log, but instead in that file. Starting with revision 2, and then moving towards revision 3 in future sessions.
 
+=============================================================================================================================================================================================
+7/21/26 
+
+-Today and tomorrow are catch up days. 
+-Gonna spend these days getting some more alert drafts into polished ones and portfolio ready
+-Planning on applying as well
